@@ -16,5 +16,7 @@ namespace SystemAirline___PROYECTO
         {
             InitializeComponent();
         }
+
+       
     }
 }
