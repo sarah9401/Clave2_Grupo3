@@ -231,7 +231,7 @@ namespace SystemAirline___PROYECTO
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(663, 336);
+            this.button1.Location = new System.Drawing.Point(12, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
             this.button1.TabIndex = 2;
