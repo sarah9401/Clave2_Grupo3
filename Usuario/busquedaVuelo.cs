@@ -16,5 +16,10 @@ namespace SystemAirline___PROYECTO
         {
             InitializeComponent();
         }
+
+        private void gpbGeneral_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,13 +35,21 @@ namespace SystemAirline___PROYECTO
             this.rdbIdaVuelta = new System.Windows.Forms.RadioButton();
             this.btnBuscarVuelo = new System.Windows.Forms.Button();
             this.gpbSoloIdaSelected = new System.Windows.Forms.GroupBox();
+            this.domainUpDown3 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
             this.txtOrigenSoloIda = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbmDestinoSoloIda = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.gpbSoloIda = new System.Windows.Forms.GroupBox();
             this.dtpSoloIda = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gpbIdaVuelta = new System.Windows.Forms.GroupBox();
+            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtOrigenIdaVuleta = new System.Windows.Forms.TextBox();
             this.cbmDestinoIDAVUELTA = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -57,14 +65,6 @@ namespace SystemAirline___PROYECTO
             this.TipoAvion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown3 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.gpbGeneral.SuspendLayout();
             this.gpbSoloIdaSelected.SuspendLayout();
             this.gpbSoloIda.SuspendLayout();
@@ -91,13 +91,14 @@ namespace SystemAirline___PROYECTO
             this.gpbGeneral.TabIndex = 3;
             this.gpbGeneral.TabStop = false;
             this.gpbGeneral.Text = "Consulta y busqueda de vuelos";
+            this.gpbGeneral.Enter += new System.EventHandler(this.gpbGeneral_Enter);
             // 
             // rdbSoloida
             // 
             this.rdbSoloida.AutoSize = true;
             this.rdbSoloida.Location = new System.Drawing.Point(279, 39);
             this.rdbSoloida.Name = "rdbSoloida";
-            this.rdbSoloida.Size = new System.Drawing.Size(94, 23);
+            this.rdbSoloida.Size = new System.Drawing.Size(137, 32);
             this.rdbSoloida.TabIndex = 4;
             this.rdbSoloida.TabStop = true;
             this.rdbSoloida.Text = "Solo ida";
@@ -109,7 +110,7 @@ namespace SystemAirline___PROYECTO
             this.rdbIdaVuelta.AutoSize = true;
             this.rdbIdaVuelta.Location = new System.Drawing.Point(13, 39);
             this.rdbIdaVuelta.Name = "rdbIdaVuelta";
-            this.rdbIdaVuelta.Size = new System.Drawing.Size(126, 23);
+            this.rdbIdaVuelta.Size = new System.Drawing.Size(189, 32);
             this.rdbIdaVuelta.TabIndex = 3;
             this.rdbIdaVuelta.TabStop = true;
             this.rdbIdaVuelta.Text = "Ida y vuelta";
@@ -153,13 +154,36 @@ namespace SystemAirline___PROYECTO
             this.gpbSoloIdaSelected.TabStop = false;
             this.gpbSoloIdaSelected.Text = "Solo ida";
             // 
+            // domainUpDown3
+            // 
+            this.domainUpDown3.Location = new System.Drawing.Point(82, 240);
+            this.domainUpDown3.Name = "domainUpDown3";
+            this.domainUpDown3.Size = new System.Drawing.Size(64, 30);
+            this.domainUpDown3.TabIndex = 15;
+            // 
+            // domainUpDown4
+            // 
+            this.domainUpDown4.Location = new System.Drawing.Point(82, 210);
+            this.domainUpDown4.Name = "domainUpDown4";
+            this.domainUpDown4.Size = new System.Drawing.Size(64, 30);
+            this.domainUpDown4.TabIndex = 14;
+            // 
             // txtOrigenSoloIda
             // 
             this.txtOrigenSoloIda.Location = new System.Drawing.Point(11, 66);
             this.txtOrigenSoloIda.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtOrigenSoloIda.Name = "txtOrigenSoloIda";
-            this.txtOrigenSoloIda.Size = new System.Drawing.Size(182, 23);
+            this.txtOrigenSoloIda.Size = new System.Drawing.Size(182, 30);
             this.txtOrigenSoloIda.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 242);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 26);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Niños:";
             // 
             // cbmDestinoSoloIda
             // 
@@ -178,8 +202,17 @@ namespace SystemAirline___PROYECTO
             this.cbmDestinoSoloIda.Location = new System.Drawing.Point(11, 114);
             this.cbmDestinoSoloIda.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbmDestinoSoloIda.Name = "cbmDestinoSoloIda";
-            this.cbmDestinoSoloIda.Size = new System.Drawing.Size(182, 26);
+            this.cbmDestinoSoloIda.Size = new System.Drawing.Size(182, 34);
             this.cbmDestinoSoloIda.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 26);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Adultos:";
             // 
             // gpbSoloIda
             // 
@@ -200,7 +233,7 @@ namespace SystemAirline___PROYECTO
             this.dtpSoloIda.Location = new System.Drawing.Point(5, 18);
             this.dtpSoloIda.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpSoloIda.Name = "dtpSoloIda";
-            this.dtpSoloIda.Size = new System.Drawing.Size(167, 20);
+            this.dtpSoloIda.Size = new System.Drawing.Size(167, 27);
             this.dtpSoloIda.TabIndex = 0;
             // 
             // label3
@@ -210,7 +243,7 @@ namespace SystemAirline___PROYECTO
             this.label3.Location = new System.Drawing.Point(5, 93);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 16);
+            this.label3.Size = new System.Drawing.Size(164, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ciudad de destino:";
             // 
@@ -221,7 +254,7 @@ namespace SystemAirline___PROYECTO
             this.label4.Location = new System.Drawing.Point(5, 45);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 16);
+            this.label4.Size = new System.Drawing.Size(156, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Cuidad de origen:";
             // 
@@ -249,12 +282,44 @@ namespace SystemAirline___PROYECTO
             this.gpbIdaVuelta.TabStop = false;
             this.gpbIdaVuelta.Text = "Ida y vuelta";
             // 
+            // domainUpDown2
+            // 
+            this.domainUpDown2.Location = new System.Drawing.Point(81, 283);
+            this.domainUpDown2.Name = "domainUpDown2";
+            this.domainUpDown2.Size = new System.Drawing.Size(64, 30);
+            this.domainUpDown2.TabIndex = 11;
+            // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Location = new System.Drawing.Point(81, 253);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(64, 30);
+            this.domainUpDown1.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 26);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Niños:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 26);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Adultos:";
+            // 
             // txtOrigenIdaVuleta
             // 
             this.txtOrigenIdaVuleta.Location = new System.Drawing.Point(5, 66);
             this.txtOrigenIdaVuleta.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtOrigenIdaVuleta.Name = "txtOrigenIdaVuleta";
-            this.txtOrigenIdaVuleta.Size = new System.Drawing.Size(182, 23);
+            this.txtOrigenIdaVuleta.Size = new System.Drawing.Size(182, 30);
             this.txtOrigenIdaVuleta.TabIndex = 7;
             // 
             // cbmDestinoIDAVUELTA
@@ -268,7 +333,7 @@ namespace SystemAirline___PROYECTO
             this.cbmDestinoIDAVUELTA.Location = new System.Drawing.Point(7, 114);
             this.cbmDestinoIDAVUELTA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbmDestinoIDAVUELTA.Name = "cbmDestinoIDAVUELTA";
-            this.cbmDestinoIDAVUELTA.Size = new System.Drawing.Size(182, 26);
+            this.cbmDestinoIDAVUELTA.Size = new System.Drawing.Size(182, 34);
             this.cbmDestinoIDAVUELTA.TabIndex = 6;
             // 
             // groupBox5
@@ -290,7 +355,7 @@ namespace SystemAirline___PROYECTO
             this.dtpVuelta.Location = new System.Drawing.Point(5, 18);
             this.dtpVuelta.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpVuelta.Name = "dtpVuelta";
-            this.dtpVuelta.Size = new System.Drawing.Size(167, 20);
+            this.dtpVuelta.Size = new System.Drawing.Size(167, 27);
             this.dtpVuelta.TabIndex = 1;
             // 
             // groupBox4
@@ -312,7 +377,7 @@ namespace SystemAirline___PROYECTO
             this.dtpIda.Location = new System.Drawing.Point(5, 18);
             this.dtpIda.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpIda.Name = "dtpIda";
-            this.dtpIda.Size = new System.Drawing.Size(167, 20);
+            this.dtpIda.Size = new System.Drawing.Size(167, 27);
             this.dtpIda.TabIndex = 0;
             // 
             // label2
@@ -322,7 +387,7 @@ namespace SystemAirline___PROYECTO
             this.label2.Location = new System.Drawing.Point(5, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(164, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ciudad de destino:";
             // 
@@ -333,7 +398,7 @@ namespace SystemAirline___PROYECTO
             this.label1.Location = new System.Drawing.Point(5, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cuidad de origen:";
             // 
@@ -349,109 +414,58 @@ namespace SystemAirline___PROYECTO
             this.Seleccion});
             this.dgvDatosVuelos.Location = new System.Drawing.Point(45, 490);
             this.dgvDatosVuelos.Name = "dgvDatosVuelos";
+            this.dgvDatosVuelos.RowHeadersWidth = 62;
             this.dgvDatosVuelos.Size = new System.Drawing.Size(653, 131);
             this.dgvDatosVuelos.TabIndex = 4;
             // 
             // Aerolinea
             // 
             this.Aerolinea.HeaderText = "AEROLINEA";
+            this.Aerolinea.MinimumWidth = 8;
             this.Aerolinea.Name = "Aerolinea";
+            this.Aerolinea.Width = 150;
             // 
             // Ruta
             // 
             this.Ruta.HeaderText = "RUTA DE VIAJE";
+            this.Ruta.MinimumWidth = 8;
             this.Ruta.Name = "Ruta";
+            this.Ruta.Width = 150;
             // 
             // Duracion
             // 
             this.Duracion.HeaderText = "DURACION DEL VUELO";
+            this.Duracion.MinimumWidth = 8;
             this.Duracion.Name = "Duracion";
+            this.Duracion.Width = 150;
             // 
             // TipoAvion
             // 
             this.TipoAvion.HeaderText = "TIPO DE AVION";
+            this.TipoAvion.MinimumWidth = 8;
             this.TipoAvion.Name = "TipoAvion";
+            this.TipoAvion.Width = 150;
             // 
             // Tarifa
             // 
             this.Tarifa.HeaderText = "TARIFA";
+            this.Tarifa.MinimumWidth = 8;
             this.Tarifa.Name = "Tarifa";
+            this.Tarifa.Width = 150;
             // 
             // Seleccion
             // 
             this.Seleccion.HeaderText = "SELECCIONAR";
+            this.Seleccion.MinimumWidth = 8;
             this.Seleccion.Name = "Seleccion";
             this.Seleccion.Text = "SELECCIONAR";
             this.Seleccion.ToolTipText = "SELECCIONAR";
             this.Seleccion.UseColumnTextForButtonValue = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Adultos:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Niños:";
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Location = new System.Drawing.Point(81, 253);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(64, 23);
-            this.domainUpDown1.TabIndex = 10;
-            // 
-            // domainUpDown2
-            // 
-            this.domainUpDown2.Location = new System.Drawing.Point(81, 283);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(64, 23);
-            this.domainUpDown2.TabIndex = 11;
-            // 
-            // domainUpDown3
-            // 
-            this.domainUpDown3.Location = new System.Drawing.Point(82, 240);
-            this.domainUpDown3.Name = "domainUpDown3";
-            this.domainUpDown3.Size = new System.Drawing.Size(64, 23);
-            this.domainUpDown3.TabIndex = 15;
-            // 
-            // domainUpDown4
-            // 
-            this.domainUpDown4.Location = new System.Drawing.Point(82, 210);
-            this.domainUpDown4.Name = "domainUpDown4";
-            this.domainUpDown4.Size = new System.Drawing.Size(64, 23);
-            this.domainUpDown4.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 18);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Niños:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 212);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 18);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Adultos:";
+            this.Seleccion.Width = 150;
             // 
             // formPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SystemAirline___PROYECTO.Properties.Resources.Fondo_principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

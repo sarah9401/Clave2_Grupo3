@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemAirline___PROYECTO.Empleado;
 
 namespace SystemAirline___PROYECTO
 {
@@ -16,7 +17,7 @@ namespace SystemAirline___PROYECTO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formPrincipal());
+            Application.Run(new Aerolineas());
         }
     }
 }
