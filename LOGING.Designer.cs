@@ -29,51 +29,51 @@ namespace SystemAirline___PROYECTO
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtCorreoInicio = new System.Windows.Forms.TextBox();
+            this.txtContraInicio = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnInicioS = new System.Windows.Forms.Button();
+            this.btnInicioSesion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
             this.btnInicioRegistro = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtContraRegistro = new System.Windows.Forms.TextBox();
+            this.txtCorreoRegistro = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtEmail
+            // txtCorreoInicio
             // 
-            this.txtEmail.Location = new System.Drawing.Point(27, 78);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(158, 23);
-            this.txtEmail.TabIndex = 0;
+            this.txtCorreoInicio.Location = new System.Drawing.Point(27, 78);
+            this.txtCorreoInicio.Name = "txtCorreoInicio";
+            this.txtCorreoInicio.Size = new System.Drawing.Size(158, 23);
+            this.txtCorreoInicio.TabIndex = 0;
             // 
-            // txtPassword
+            // txtContraInicio
             // 
-            this.txtPassword.Location = new System.Drawing.Point(27, 148);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(158, 23);
-            this.txtPassword.TabIndex = 1;
+            this.txtContraInicio.Location = new System.Drawing.Point(27, 148);
+            this.txtContraInicio.Name = "txtContraInicio";
+            this.txtContraInicio.PasswordChar = '*';
+            this.txtContraInicio.Size = new System.Drawing.Size(158, 23);
+            this.txtContraInicio.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImage = global::SystemAirline___PROYECTO.Properties.Resources.Fondo_principal;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.btnInicioS);
+            this.groupBox1.Controls.Add(this.btnInicioSesion);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtContraInicio);
+            this.groupBox1.Controls.Add(this.txtCorreoInicio);
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(304, 161);
             this.groupBox1.Name = "groupBox1";
@@ -82,14 +82,15 @@ namespace SystemAirline___PROYECTO
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inicio de sesión";
             // 
-            // btnInicioS
+            // btnInicioSesion
             // 
-            this.btnInicioS.Location = new System.Drawing.Point(45, 206);
-            this.btnInicioS.Name = "btnInicioS";
-            this.btnInicioS.Size = new System.Drawing.Size(109, 23);
-            this.btnInicioS.TabIndex = 4;
-            this.btnInicioS.Text = "Iniciar sesión";
-            this.btnInicioS.UseVisualStyleBackColor = true;
+            this.btnInicioSesion.Location = new System.Drawing.Point(45, 206);
+            this.btnInicioSesion.Name = "btnInicioSesion";
+            this.btnInicioSesion.Size = new System.Drawing.Size(109, 23);
+            this.btnInicioSesion.TabIndex = 4;
+            this.btnInicioSesion.Text = "Iniciar sesión";
+            this.btnInicioSesion.UseVisualStyleBackColor = true;
+            this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
             // 
             // label2
             // 
@@ -112,15 +113,15 @@ namespace SystemAirline___PROYECTO
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtNacimiento);
             this.groupBox2.Controls.Add(this.btnInicioRegistro);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txtNombre);
+            this.groupBox2.Controls.Add(this.txtContraRegistro);
+            this.groupBox2.Controls.Add(this.txtCorreoRegistro);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 161);
             this.groupBox2.Name = "groupBox2";
@@ -129,14 +130,23 @@ namespace SystemAirline___PROYECTO
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrate";
             // 
+            // dtNacimiento
+            // 
+            this.dtNacimiento.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNacimiento.Location = new System.Drawing.Point(27, 194);
+            this.dtNacimiento.Name = "dtNacimiento";
+            this.dtNacimiento.Size = new System.Drawing.Size(224, 22);
+            this.dtNacimiento.TabIndex = 9;
+            // 
             // btnInicioRegistro
             // 
             this.btnInicioRegistro.Location = new System.Drawing.Point(43, 258);
             this.btnInicioRegistro.Name = "btnInicioRegistro";
             this.btnInicioRegistro.Size = new System.Drawing.Size(118, 23);
             this.btnInicioRegistro.TabIndex = 5;
-            this.btnInicioRegistro.Text = "Iniciar regristro";
+            this.btnInicioRegistro.Text = "Registrarse";
             this.btnInicioRegistro.UseVisualStyleBackColor = true;
+            this.btnInicioRegistro.Click += new System.EventHandler(this.btnInicioRegistro_Click);
             // 
             // label6
             // 
@@ -170,39 +180,31 @@ namespace SystemAirline___PROYECTO
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.Size = new System.Drawing.Size(169, 15);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ingresa tu Email";
+            this.label3.Text = "Ingresa tu correo electronico";
             // 
-            // textBox6
+            // txtNombre
             // 
-            this.textBox6.Location = new System.Drawing.Point(27, 133);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(158, 23);
-            this.textBox6.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(27, 133);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(158, 23);
+            this.txtNombre.TabIndex = 2;
             // 
-            // textBox7
+            // txtContraRegistro
             // 
-            this.textBox7.Location = new System.Drawing.Point(27, 91);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PasswordChar = '*';
-            this.textBox7.Size = new System.Drawing.Size(158, 23);
-            this.textBox7.TabIndex = 1;
+            this.txtContraRegistro.Location = new System.Drawing.Point(27, 91);
+            this.txtContraRegistro.Name = "txtContraRegistro";
+            this.txtContraRegistro.PasswordChar = '*';
+            this.txtContraRegistro.Size = new System.Drawing.Size(158, 23);
+            this.txtContraRegistro.TabIndex = 1;
             // 
-            // textBox8
+            // txtCorreoRegistro
             // 
-            this.textBox8.Location = new System.Drawing.Point(27, 47);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(158, 23);
-            this.textBox8.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(27, 194);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 22);
-            this.dateTimePicker1.TabIndex = 9;
+            this.txtCorreoRegistro.Location = new System.Drawing.Point(27, 47);
+            this.txtCorreoRegistro.Name = "txtCorreoRegistro";
+            this.txtCorreoRegistro.Size = new System.Drawing.Size(158, 23);
+            this.txtCorreoRegistro.TabIndex = 0;
             // 
             // LOGING
             // 
@@ -226,14 +228,14 @@ namespace SystemAirline___PROYECTO
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtCorreoInicio;
+        private System.Windows.Forms.TextBox txtContraInicio;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button btnInicioS;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtContraRegistro;
+        private System.Windows.Forms.TextBox txtCorreoRegistro;
+        private System.Windows.Forms.Button btnInicioSesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInicioRegistro;
@@ -241,6 +243,6 @@ namespace SystemAirline___PROYECTO
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtNacimiento;
     }
 }
