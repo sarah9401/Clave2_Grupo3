@@ -109,6 +109,12 @@
     <Compile Include="Empleado\Aerolineas.Designer.cs">
       <DependentUpon>Aerolineas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\RutaTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\RutaTarifa.Designer.cs">
+      <DependentUpon>RutaTarifa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario\Comprobante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,7 +151,9 @@
     <Compile Include="Usuario\PantallaInicioUsuario.Designer.cs">
       <DependentUpon>PantallaInicioUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VerReservaciones.cs">
       <SubType>Form</SubType>
@@ -155,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="Empleado\Aerolineas.resx">
       <DependentUpon>Aerolineas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\RutaTarifa.resx">
+      <DependentUpon>RutaTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\Comprobante.resx">
       <DependentUpon>Comprobante.cs</DependentUpon>

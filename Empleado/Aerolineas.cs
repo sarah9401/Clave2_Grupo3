@@ -175,5 +175,10 @@ namespace SystemAirline___PROYECTO.Empleado
             txtPaisOrigen.Clear();
             aerolineaSeleccionadaId = -1;
         }
+
+        private void dgvAerolineas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

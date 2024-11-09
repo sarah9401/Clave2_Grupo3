@@ -29,40 +29,44 @@ namespace SystemAirline___PROYECTO
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCrearReservaciones = new System.Windows.Forms.Button();
-            this.btnVerReservaciones = new System.Windows.Forms.Button();
+            this.btnRutaTarifa = new System.Windows.Forms.Button();
+            this.btnAsientos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCrearReservaciones
+            // btnRutaTarifa
             // 
-            this.btnCrearReservaciones.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearReservaciones.Location = new System.Drawing.Point(44, 34);
-            this.btnCrearReservaciones.Name = "btnCrearReservaciones";
-            this.btnCrearReservaciones.Size = new System.Drawing.Size(357, 64);
-            this.btnCrearReservaciones.TabIndex = 2;
-            this.btnCrearReservaciones.Text = "CREAR RESERVACION";
-            this.btnCrearReservaciones.UseVisualStyleBackColor = true;
+            this.btnRutaTarifa.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutaTarifa.Location = new System.Drawing.Point(66, 48);
+            this.btnRutaTarifa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRutaTarifa.Name = "btnRutaTarifa";
+            this.btnRutaTarifa.Size = new System.Drawing.Size(175, 106);
+            this.btnRutaTarifa.TabIndex = 2;
+            this.btnRutaTarifa.Text = "Ruta tarifa";
+            this.btnRutaTarifa.UseVisualStyleBackColor = true;
             // 
-            // btnVerReservaciones
+            // btnAsientos
             // 
-            this.btnVerReservaciones.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerReservaciones.Location = new System.Drawing.Point(44, 132);
-            this.btnVerReservaciones.Name = "btnVerReservaciones";
-            this.btnVerReservaciones.Size = new System.Drawing.Size(357, 64);
-            this.btnVerReservaciones.TabIndex = 3;
-            this.btnVerReservaciones.Text = "VER MIS RESERVACIONES";
-            this.btnVerReservaciones.UseVisualStyleBackColor = true;
+            this.btnAsientos.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsientos.Location = new System.Drawing.Point(249, 48);
+            this.btnAsientos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAsientos.Name = "btnAsientos";
+            this.btnAsientos.Size = new System.Drawing.Size(191, 106);
+            this.btnAsientos.TabIndex = 3;
+            this.btnAsientos.Text = "Asientos";
+            this.btnAsientos.UseVisualStyleBackColor = true;
             // 
             // PantallaInicioUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackgroundImage = global::SystemAirline___PROYECTO.Properties.Resources.Fondo_principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(444, 277);
-            this.Controls.Add(this.btnVerReservaciones);
-            this.Controls.Add(this.btnCrearReservaciones);
+            this.ClientSize = new System.Drawing.Size(822, 536);
+            this.Controls.Add(this.btnAsientos);
+            this.Controls.Add(this.btnRutaTarifa);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PantallaInicioUsuario";
             this.Text = "PantallaInicioUsuario";
             this.ResumeLayout(false);
@@ -70,7 +74,7 @@ namespace SystemAirline___PROYECTO
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCrearReservaciones;
-        private System.Windows.Forms.Button btnVerReservaciones;
+        private System.Windows.Forms.Button btnRutaTarifa;
+        private System.Windows.Forms.Button btnAsientos;
     }
 }
