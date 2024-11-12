@@ -92,5 +92,9 @@ namespace SystemAirline___PROYECTO.Empleado
             }
         }
 
+        private void RutaTarifa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
