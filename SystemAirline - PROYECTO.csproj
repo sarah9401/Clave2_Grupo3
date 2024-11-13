@@ -176,9 +176,6 @@
     <EmbeddedResource Include="Empleado\Aerolineas.resx">
       <DependentUpon>Aerolineas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleado\Avion.resx">
-      <DependentUpon>Avion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Empleado\RutaTarifa.resx">
       <DependentUpon>RutaTarifa.cs</DependentUpon>
     </EmbeddedResource>

@@ -48,42 +48,41 @@ namespace SystemAirline___PROYECTO.Empleado
             this.label1.Location = new System.Drawing.Point(38, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Aerolinea";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(50, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pais de Origen";
             // 
             // txtNombreAerolinea
             // 
-            this.txtNombreAerolinea.Location = new System.Drawing.Point(132, 58);
-            this.txtNombreAerolinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreAerolinea.Location = new System.Drawing.Point(176, 71);
+            this.txtNombreAerolinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreAerolinea.Name = "txtNombreAerolinea";
-            this.txtNombreAerolinea.Size = new System.Drawing.Size(198, 20);
+            this.txtNombreAerolinea.Size = new System.Drawing.Size(263, 22);
             this.txtNombreAerolinea.TabIndex = 2;
             // 
             // txtPaisOrigen
             // 
-            this.txtPaisOrigen.Location = new System.Drawing.Point(132, 87);
-            this.txtPaisOrigen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaisOrigen.Location = new System.Drawing.Point(176, 107);
+            this.txtPaisOrigen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaisOrigen.Name = "txtPaisOrigen";
-            this.txtPaisOrigen.Size = new System.Drawing.Size(198, 20);
+            this.txtPaisOrigen.Size = new System.Drawing.Size(263, 22);
             this.txtPaisOrigen.TabIndex = 3;
             // 
             // btnAgregarAerolinea
             // 
-            this.btnAgregarAerolinea.Location = new System.Drawing.Point(410, 27);
-            this.btnAgregarAerolinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarAerolinea.Location = new System.Drawing.Point(547, 33);
+            this.btnAgregarAerolinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarAerolinea.Name = "btnAgregarAerolinea";
-            this.btnAgregarAerolinea.Size = new System.Drawing.Size(58, 21);
+            this.btnAgregarAerolinea.Size = new System.Drawing.Size(77, 26);
             this.btnAgregarAerolinea.TabIndex = 4;
             this.btnAgregarAerolinea.Text = "Agregar";
             this.btnAgregarAerolinea.UseVisualStyleBackColor = true;
@@ -91,10 +90,10 @@ namespace SystemAirline___PROYECTO.Empleado
             // 
             // btnModificarAerolinea
             // 
-            this.btnModificarAerolinea.Location = new System.Drawing.Point(410, 58);
-            this.btnModificarAerolinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarAerolinea.Location = new System.Drawing.Point(547, 71);
+            this.btnModificarAerolinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificarAerolinea.Name = "btnModificarAerolinea";
-            this.btnModificarAerolinea.Size = new System.Drawing.Size(58, 21);
+            this.btnModificarAerolinea.Size = new System.Drawing.Size(77, 26);
             this.btnModificarAerolinea.TabIndex = 5;
             this.btnModificarAerolinea.Text = "Modificar";
             this.btnModificarAerolinea.UseVisualStyleBackColor = true;
@@ -102,10 +101,10 @@ namespace SystemAirline___PROYECTO.Empleado
             // 
             // btnEliminarAerolinea
             // 
-            this.btnEliminarAerolinea.Location = new System.Drawing.Point(410, 91);
-            this.btnEliminarAerolinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarAerolinea.Location = new System.Drawing.Point(547, 112);
+            this.btnEliminarAerolinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarAerolinea.Name = "btnEliminarAerolinea";
-            this.btnEliminarAerolinea.Size = new System.Drawing.Size(58, 21);
+            this.btnEliminarAerolinea.Size = new System.Drawing.Size(77, 26);
             this.btnEliminarAerolinea.TabIndex = 6;
             this.btnEliminarAerolinea.Text = "Eliminar";
             this.btnEliminarAerolinea.UseVisualStyleBackColor = true;
@@ -114,37 +113,36 @@ namespace SystemAirline___PROYECTO.Empleado
             // dgvAerolineas
             // 
             this.dgvAerolineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAerolineas.Location = new System.Drawing.Point(8, 132);
-            this.dgvAerolineas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAerolineas.Location = new System.Drawing.Point(11, 163);
+            this.dgvAerolineas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAerolineas.Name = "dgvAerolineas";
             this.dgvAerolineas.RowHeadersWidth = 62;
             this.dgvAerolineas.RowTemplate.Height = 28;
-            this.dgvAerolineas.Size = new System.Drawing.Size(518, 145);
+            this.dgvAerolineas.Size = new System.Drawing.Size(690, 179);
             this.dgvAerolineas.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(50, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Id Aeroliena";
             // 
             // txtIdAerolinea
             // 
-            this.txtIdAerolinea.Location = new System.Drawing.Point(132, 27);
-            this.txtIdAerolinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdAerolinea.Location = new System.Drawing.Point(176, 33);
+            this.txtIdAerolinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdAerolinea.Name = "txtIdAerolinea";
-            this.txtIdAerolinea.Size = new System.Drawing.Size(198, 20);
+            this.txtIdAerolinea.Size = new System.Drawing.Size(263, 22);
             this.txtIdAerolinea.TabIndex = 9;
             // 
             // Aerolineas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.txtIdAerolinea);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvAerolineas);
