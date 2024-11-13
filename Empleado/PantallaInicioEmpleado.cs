@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SystemAirline___PROYECTO
 {
-    public partial class formPrincipal : Form
+    public partial class PantallaInicioEmpleado : Form
     {
-        public formPrincipal()
+        public PantallaInicioEmpleado()
         {
             InitializeComponent();
         }

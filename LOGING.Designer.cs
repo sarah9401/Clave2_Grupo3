@@ -45,20 +45,22 @@ namespace SystemAirline___PROYECTO
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtContraRegistro = new System.Windows.Forms.TextBox();
             this.txtCorreoRegistro = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCorreoInicio
             // 
-            this.txtCorreoInicio.Location = new System.Drawing.Point(27, 78);
+            this.txtCorreoInicio.Location = new System.Drawing.Point(28, 122);
             this.txtCorreoInicio.Name = "txtCorreoInicio";
             this.txtCorreoInicio.Size = new System.Drawing.Size(158, 23);
             this.txtCorreoInicio.TabIndex = 0;
             // 
             // txtContraInicio
             // 
-            this.txtContraInicio.Location = new System.Drawing.Point(27, 148);
+            this.txtContraInicio.Location = new System.Drawing.Point(28, 192);
             this.txtContraInicio.Name = "txtContraInicio";
             this.txtContraInicio.PasswordChar = '*';
             this.txtContraInicio.Size = new System.Drawing.Size(158, 23);
@@ -77,14 +79,14 @@ namespace SystemAirline___PROYECTO
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(304, 161);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(214, 292);
+            this.groupBox1.Size = new System.Drawing.Size(205, 326);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inicio de sesión";
             // 
             // btnInicioSesion
             // 
-            this.btnInicioSesion.Location = new System.Drawing.Point(45, 206);
+            this.btnInicioSesion.Location = new System.Drawing.Point(45, 280);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(109, 23);
             this.btnInicioSesion.TabIndex = 4;
@@ -95,7 +97,7 @@ namespace SystemAirline___PROYECTO
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 122);
+            this.label2.Location = new System.Drawing.Point(25, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 15);
             this.label2.TabIndex = 3;
@@ -104,7 +106,7 @@ namespace SystemAirline___PROYECTO
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 50);
+            this.label1.Location = new System.Drawing.Point(25, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 15);
             this.label1.TabIndex = 2;
@@ -113,6 +115,8 @@ namespace SystemAirline___PROYECTO
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtDocumento);
             this.groupBox2.Controls.Add(this.dtNacimiento);
             this.groupBox2.Controls.Add(this.btnInicioRegistro);
             this.groupBox2.Controls.Add(this.label6);
@@ -125,7 +129,7 @@ namespace SystemAirline___PROYECTO
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 161);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 292);
+            this.groupBox2.Size = new System.Drawing.Size(245, 326);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrate";
@@ -133,14 +137,14 @@ namespace SystemAirline___PROYECTO
             // dtNacimiento
             // 
             this.dtNacimiento.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNacimiento.Location = new System.Drawing.Point(27, 194);
+            this.dtNacimiento.Location = new System.Drawing.Point(27, 227);
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(224, 22);
             this.dtNacimiento.TabIndex = 9;
             // 
             // btnInicioRegistro
             // 
-            this.btnInicioRegistro.Location = new System.Drawing.Point(43, 258);
+            this.btnInicioRegistro.Location = new System.Drawing.Point(53, 280);
             this.btnInicioRegistro.Name = "btnInicioRegistro";
             this.btnInicioRegistro.Size = new System.Drawing.Size(118, 23);
             this.btnInicioRegistro.TabIndex = 5;
@@ -151,7 +155,7 @@ namespace SystemAirline___PROYECTO
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 164);
+            this.label6.Location = new System.Drawing.Point(27, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 15);
             this.label6.TabIndex = 8;
@@ -206,6 +210,22 @@ namespace SystemAirline___PROYECTO
             this.txtCorreoRegistro.Size = new System.Drawing.Size(158, 23);
             this.txtCorreoRegistro.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 15);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Documento ";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Location = new System.Drawing.Point(27, 177);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(158, 23);
+            this.txtDocumento.TabIndex = 10;
+            // 
             // LOGING
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,5 +264,7 @@ namespace SystemAirline___PROYECTO
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtNacimiento;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDocumento;
     }
 }
