@@ -41,10 +41,11 @@ namespace SystemAirline___PROYECTO
             string correoRegistro = txtCorreoRegistro.Text.Trim();
             string contraRegistro = txtContraRegistro.Text.Trim();
             string nombre = txtNombre.Text.Trim();
+            string documento = txtDocumento.Text.Trim();
             DateTime fechaNacimiento;
 
             // Verificar que los campos no estén vacíos
-            if (string.IsNullOrEmpty(correoRegistro) || string.IsNullOrEmpty(contraRegistro) ||
+            if (string.IsNullOrEmpty(correoRegistro) || string.IsNullOrEmpty(contraRegistro) || string.IsNullOrEmpty(documento)||
                 string.IsNullOrEmpty(nombre) || !DateTime.TryParse(dtNacimiento.Text, out fechaNacimiento))
             {
                 MessageBox.Show("Por favor complete todos los campos correctamente.");
@@ -60,8 +61,8 @@ namespace SystemAirline___PROYECTO
                 string contraEncriptada = EncriptarContraseñaBcrypt(contraRegistro);
 
                 // Crear la consulta SQL para insertar un nuevo usuario
-                string query = "INSERT INTO usuario (nombre, fecha_nacimiento, correo, activo, contrasena, id_tipo_usuario) " +
-                               "VALUES (@nombre, @fecha_nacimiento, @correo, @activo, @contrasena, @id_tipo_usuario)";
+                string query = "INSERT INTO usuario (nombre, fecha_nacimiento, correo, activo, contrasena, id_tipo_usuario,documento) " +
+                               "VALUES (@nombre, @fecha_nacimiento, @correo, @activo, @contrasena, @id_tipo_usuario, @documento)";
 
                 // Crear el comando SQL
                 MySqlCommand cmd = new MySqlCommand(query, conexionDB);
@@ -73,6 +74,7 @@ namespace SystemAirline___PROYECTO
                 cmd.Parameters.AddWithValue("@activo", 1);  // Suponiendo que "activo" es 1 al registrarse
                 cmd.Parameters.AddWithValue("@contrasena", contraEncriptada);  // Usar la contraseña encriptada
                 cmd.Parameters.AddWithValue("@id_tipo_usuario", 1);  // id_tipo_usuario = 1
+                cmd.Parameters.AddWithValue("@documento", documento);
 
                 // Ejecutar el comando para insertar el registro
                 int resultado = cmd.ExecuteNonQuery();
@@ -80,6 +82,12 @@ namespace SystemAirline___PROYECTO
                 if (resultado > 0)
                 {
                     MessageBox.Show("Registro exitoso.");
+                    txtCorreoRegistro.Clear();
+                    txtContraRegistro.Clear();
+                    txtNombre.Clear();
+                    txtDocumento.Clear();
+                    dtNacimiento.Value = DateTime.Now;
+
                 }
                 else
                 {
@@ -142,8 +150,11 @@ namespace SystemAirline___PROYECTO
                         }
                         else
                         {
-                            // Redirigir o hacer algo para otros tipos de usuarios
-                            MessageBox.Show("Tipo de usuario no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            PantallaInicioEmpleado pantallaInicio = new PantallaInicioEmpleado();
+                            pantallaInicio.Show();
+
+                            this.Hide();
                         }
                     }
                     else
