@@ -115,6 +115,18 @@
     <Compile Include="Empleado\Aerolineas.Designer.cs">
       <DependentUpon>Aerolineas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Horarios.Designer.cs">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\rutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\rutas.Designer.cs">
+      <DependentUpon>rutas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empleado\RutaTarifa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,9 +187,6 @@
     </Compile>
     <EmbeddedResource Include="Empleado\Aerolineas.resx">
       <DependentUpon>Aerolineas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Empleado\Asientos.resx">
-      <DependentUpon>Asientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\RutaTarifa.resx">
       <DependentUpon>RutaTarifa.cs</DependentUpon>
