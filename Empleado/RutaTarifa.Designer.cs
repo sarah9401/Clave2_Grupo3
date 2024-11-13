@@ -42,78 +42,87 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 100);
+            this.label1.Location = new System.Drawing.Point(63, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Precio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 136);
+            this.label2.Location = new System.Drawing.Point(63, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ruta";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 173);
+            this.label3.Location = new System.Drawing.Point(63, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tarifa";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(148, 100);
+            this.txtPrecio.Location = new System.Drawing.Point(111, 81);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(191, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(144, 20);
             this.txtPrecio.TabIndex = 3;
             // 
             // cmbRuta
             // 
             this.cmbRuta.FormattingEnabled = true;
-            this.cmbRuta.Location = new System.Drawing.Point(148, 133);
+            this.cmbRuta.Location = new System.Drawing.Point(111, 108);
+            this.cmbRuta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRuta.Name = "cmbRuta";
-            this.cmbRuta.Size = new System.Drawing.Size(191, 24);
+            this.cmbRuta.Size = new System.Drawing.Size(144, 21);
             this.cmbRuta.TabIndex = 4;
             // 
             // cmbTarifa
             // 
             this.cmbTarifa.FormattingEnabled = true;
-            this.cmbTarifa.Location = new System.Drawing.Point(148, 173);
+            this.cmbTarifa.Location = new System.Drawing.Point(111, 141);
+            this.cmbTarifa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTarifa.Name = "cmbTarifa";
-            this.cmbTarifa.Size = new System.Drawing.Size(191, 24);
+            this.cmbTarifa.Size = new System.Drawing.Size(144, 21);
             this.cmbTarifa.TabIndex = 5;
             // 
             // dtRutaTarifa
             // 
             this.dtRutaTarifa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtRutaTarifa.Location = new System.Drawing.Point(55, 218);
+            this.dtRutaTarifa.Location = new System.Drawing.Point(41, 177);
+            this.dtRutaTarifa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtRutaTarifa.Name = "dtRutaTarifa";
             this.dtRutaTarifa.RowHeadersWidth = 51;
             this.dtRutaTarifa.RowTemplate.Height = 24;
-            this.dtRutaTarifa.Size = new System.Drawing.Size(574, 272);
+            this.dtRutaTarifa.Size = new System.Drawing.Size(430, 221);
             this.dtRutaTarifa.TabIndex = 8;
             this.dtRutaTarifa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRutaTarifa_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(457, 160);
+            this.button1.Location = new System.Drawing.Point(343, 130);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 42);
+            this.button1.Size = new System.Drawing.Size(82, 34);
             this.button1.TabIndex = 7;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RutaTarifa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 524);
+            this.ClientSize = new System.Drawing.Size(507, 426);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtRutaTarifa);
             this.Controls.Add(this.cmbTarifa);
@@ -122,6 +131,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RutaTarifa";
             this.Text = "Ruta tarifa";
             ((System.ComponentModel.ISupportInitialize)(this.dtRutaTarifa)).EndInit();

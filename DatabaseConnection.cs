@@ -13,7 +13,7 @@ namespace SystemAirline___PROYECTO
         public static MySqlConnection conexion()
         {
             string servidor = "localhost";
-            string bd = "grupo03";
+            string bd = "grupo3";
             string usuario = "root";
             string password = "root";
 

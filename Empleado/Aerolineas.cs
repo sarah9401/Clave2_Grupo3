@@ -180,5 +180,10 @@ namespace SystemAirline___PROYECTO.Empleado
         {
 
         }
+
+        private void Aerolineas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
