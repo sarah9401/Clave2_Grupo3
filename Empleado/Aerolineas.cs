@@ -162,7 +162,6 @@ namespace SystemAirline___PROYECTO.Empleado
             if (e.RowIndex >= 0)
             {
                 aerolineaSeleccionadaId = Convert.ToInt32(dgvAerolineas.Rows[e.RowIndex].Cells["id_aerolinea"].Value);
-                txtIdAerolinea.Text = aerolineaSeleccionadaId.ToString();
                 txtNombreAerolinea.Text = dgvAerolineas.Rows[e.RowIndex].Cells["nombre_aerolinea"].Value.ToString();
                 txtPaisOrigen.Text = dgvAerolineas.Rows[e.RowIndex].Cells["pais_origen"].Value.ToString();
             }
@@ -170,7 +169,7 @@ namespace SystemAirline___PROYECTO.Empleado
 
         private void LimpiarCampos()
         {
-            txtIdAerolinea.Clear();
+           
             txtNombreAerolinea.Clear();
             txtPaisOrigen.Clear();
             aerolineaSeleccionadaId = -1;

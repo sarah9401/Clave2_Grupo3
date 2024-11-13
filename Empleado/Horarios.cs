@@ -18,13 +18,24 @@ namespace SystemAirline___PROYECTO.Empleado
             InitializeComponent();
         }
 
-        // Método que se ejecuta cuando se carga el formulario
         private void Horarios_Load(object sender, EventArgs e)
         {
             CargarHorarios(); // Carga los datos en el DataGridView al iniciar el formulario
+
+            // Configuración de los DateTimePickers para Hora de Salida y Hora de Llegada
+
+            // Configurar HoraSalida
+            dtpHoraSalida.Format = DateTimePickerFormat.Custom;
+            dtpHoraSalida.CustomFormat = "HH:mm"; // Solo muestra la hora y los minutos
+
+            // Configurar HoraLlegada
+            dtpHoraLlegada.Format = DateTimePickerFormat.Custom;
+            dtpHoraLlegada.CustomFormat = "HH:mm"; // Solo muestra la hora y los minutos
+
+
+           
         }
 
-        // Método para cargar los datos de la tabla 'rutas' en el DataGridView
         private void CargarHorarios()
         {
             using (var conexion = DatabaseConnection.conexion())
@@ -40,43 +51,52 @@ namespace SystemAirline___PROYECTO.Empleado
             }
         }
 
-        private void btnAgregarHorario_Click(object sender, EventArgs e)
+        private void btnAgregarHorario_Click_1(object sender, EventArgs e)
         {
             using (var conexion = DatabaseConnection.conexion())
             {
+                conexion.Open();
+
+                string query = "INSERT INTO horarios (fecha_vuelo, hora_salida, hora_llegada) VALUES (@fecha_vuelo, @hora_salida, @hora_llegada)";
+
+                using (var comando = new MySqlCommand(query, conexion))
                 {
-                    conexion.Open();
-                    string query = "INSERT INTO horarios (fecha_vuelo, hora_salida, hora_llegada) VALUES (@fecha_vuelo, @hora_salida, @hora_llegada)";
-                    using (var comando = new MySqlCommand(query, conexion))
-                    {
-                        comando.Parameters.AddWithValue("@FechaVuelo", dtpFechaVuelo.Value);
-                        comando.Parameters.AddWithValue("@HoraSalida", dtpHoraSalida.Value.TimeOfDay);
-                        comando.Parameters.AddWithValue("@HoraLlegada", dtpHoraLlegada.Value.TimeOfDay);
+                    // Asegúrate de añadir el parámetro para la fecha del vuelo correctamente
+                    comando.Parameters.AddWithValue("@fecha_vuelo", dtpFechaVuelo.Value.Date);  // Usar solo la fecha, sin hora
 
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Ruta agregada exitosamente.");
-                    }
+                    // Añadir los parámetros para hora de salida y llegada
+                    comando.Parameters.AddWithValue("@hora_salida", dtpHoraSalida.Value.ToString("HH:mm:ss"));
+                    comando.Parameters.AddWithValue("@hora_llegada", dtpHoraLlegada.Value.ToString("HH:mm:ss"));
 
-                    CargarHorarios();
+                    // Ejecutar la consulta
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Ruta agregada exitosamente.");
                 }
 
+                // Llamar a la función para recargar los horarios (si es necesario)
+                CargarHorarios();
             }
         }
 
-        private void btnModificarHorario_Click(object sender, EventArgs e)
+        private void btnModificarHorario_Click_1(object sender, EventArgs e)
         {
-            if (dataGridViewHorarios.CurrentRow == null)
+            int id_Horario; // Declarar la variable fuera del bloque if
+
+            if (dataGridViewHorarios.SelectedRows.Count > 0)
+            {
+                id_Horario = Convert.ToInt32(dataGridViewHorarios.SelectedRows[0].Cells["id_Horario"].Value);
+            }
+            else
             {
                 MessageBox.Show("Seleccione un horario para modificar.");
                 return;
             }
 
-            int id_Horario = Convert.ToInt32(dataGridViewHorarios.SelectedRows[0].Cells["id_Horario"].Value);
-
             using (var conexion = DatabaseConnection.conexion())
             {
                 conexion.Open();
-                string query = "UPDATE horarios SET fecha_vuelo = @fecha_vuelo, hora_salida = @hora_salida, hora_llegada = @hora_llegada WHERE id_horario = @id";
+                string query = "UPDATE horarios SET fecha_vuelo = @FechaVuelo, hora_salida = @HoraSalida, hora_llegada = @HoraLlegada WHERE id_horario = @Id";
+
                 using (var comando = new MySqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@FechaVuelo", dtpFechaVuelo.Value);
@@ -88,33 +108,33 @@ namespace SystemAirline___PROYECTO.Empleado
                     MessageBox.Show("Ruta modificada exitosamente.");
                 }
             }
+
             CargarHorarios(); // Actualizar el DataGridView después de modificar
         }
 
-        private void btnEliminarHorario_Click(object sender, EventArgs e)
+        private void btnEliminarHorario_Click_1(object sender, EventArgs e)
         {
             if (dataGridViewHorarios.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione un horario para eliminar.");
                 return;
             }
-
             int id_Horario = Convert.ToInt32(dataGridViewHorarios.SelectedRows[0].Cells["id_Horario"].Value);
             using (var conexion = DatabaseConnection.conexion())
             {
                 conexion.Open();
-                string query = "DELETE FROM rutas WHERE id_ruta = @id";
+                string query = "DELETE FROM horarios WHERE id_horario = @id";
                 using (var comando = new MySqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@Id", id_Horario);
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("Ruta eliminada exitosamente.");
+                    MessageBox.Show("Horario eliminado exitosamente.");
                 }
             }
             CargarHorarios(); // Actualizar el DataGridView después de eliminar
         }
 
-        private void dataGridViewHorarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewHorarios_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewHorarios.CurrentRow != null)
             {
@@ -125,8 +145,7 @@ namespace SystemAirline___PROYECTO.Empleado
             }
         }
     }
-}
+    }
 
-
-        
     
+

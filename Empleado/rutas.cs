@@ -9,23 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
-
 namespace SystemAirline___PROYECTO.Empleado
 {
-    public partial class rutas : Form
+    public partial class Rutas : Form
     {
-        public rutas()
+        public Rutas()
         {
             InitializeComponent();
         }
 
-        // Método que se ejecuta cuando se carga el formulario
-        private void rutas_Load(object sender, EventArgs e)
-        {
-            CargarRutas(); // Carga los datos en el DataGridView al iniciar el formulario
+        private void Rutas_Load(object sender, EventArgs e)
+        { 
+           CargarRutas(); // Carga los datos en el DataGridView al iniciar el formulario
         }
 
-        // Método para cargar los datos de la tabla 'rutas' en el DataGridView
         private void CargarRutas()
         {
             using (var conexion = DatabaseConnection.conexion())
@@ -36,11 +33,10 @@ namespace SystemAirline___PROYECTO.Empleado
                 {
                     var dataTable = new System.Data.DataTable();
                     adapter.Fill(dataTable);
-                    dataGridViewRutas.DataSource = dataTable;
+                    dgvRutas.DataSource = dataTable;
                 }
             }
         }
-
 
         // Validar formato de hora estimada (HH:MM)
         private bool EsHoraEstimadaValida(string horaEstimada)
@@ -64,7 +60,6 @@ namespace SystemAirline___PROYECTO.Empleado
                     comando.Parameters.AddWithValue("@origen", txtOrigen.Text);
                     comando.Parameters.AddWithValue("@destino", txtDestino.Text);
                     comando.Parameters.AddWithValue("@hora_estimada", txtHoraEstimada.Text);
-
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Ruta agregada exitosamente.");
                 }
@@ -74,20 +69,17 @@ namespace SystemAirline___PROYECTO.Empleado
 
         private void btnModificarRuta_Click(object sender, EventArgs e)
         {
-            if (dataGridViewRutas.CurrentRow == null)
+            if (dgvRutas.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione una ruta para modificar.");
                 return;
             }
-
             if (!EsHoraEstimadaValida(txtHoraEstimada.Text))
             {
                 MessageBox.Show("Ingrese la hora estimada en el formato HH:MM.");
                 return;
             }
-
-            int idRuta = Convert.ToInt32(dataGridViewRutas.CurrentRow.Cells["id_ruta"].Value);
-
+            int idRuta = Convert.ToInt32(dgvRutas.CurrentRow.Cells["id_ruta"].Value);
             using (var conexion = DatabaseConnection.conexion())
             {
                 conexion.Open();
@@ -98,7 +90,6 @@ namespace SystemAirline___PROYECTO.Empleado
                     comando.Parameters.AddWithValue("@origen", txtOrigen.Text);
                     comando.Parameters.AddWithValue("@destino", txtDestino.Text);
                     comando.Parameters.AddWithValue("@hora_estimada", txtHoraEstimada.Text);
-
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Ruta modificada exitosamente.");
                 }
@@ -108,14 +99,12 @@ namespace SystemAirline___PROYECTO.Empleado
 
         private void btnEliminarRuta_Click(object sender, EventArgs e)
         {
-            if (dataGridViewRutas.CurrentRow == null)
+            if (dgvRutas.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione una ruta para eliminar.");
                 return;
             }
-
-            int idRuta = Convert.ToInt32(dataGridViewRutas.CurrentRow.Cells["id_ruta"].Value);
-
+            int idRuta = Convert.ToInt32(dgvRutas.CurrentRow.Cells["id_ruta"].Value);
             using (var conexion = DatabaseConnection.conexion())
             {
                 conexion.Open();
@@ -130,17 +119,16 @@ namespace SystemAirline___PROYECTO.Empleado
             CargarRutas(); // Actualizar el DataGridView después de eliminar
         }
 
-        // Evento para seleccionar una fila en el DataGridView y mostrar los datos en los TextBox 
-        private void dataGridViewRutas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvRutas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewRutas.CurrentRow != null)
+            if (dgvRutas.CurrentRow != null)
             {
-                txtOrigen.Text = dataGridViewRutas.CurrentRow.Cells["origen"].Value.ToString();
-                txtDestino.Text = dataGridViewRutas.CurrentRow.Cells["destino"].Value.ToString();
-                txtHoraEstimada.Text = dataGridViewRutas.CurrentRow.Cells["hora_estimada"].Value.ToString();
+                txtOrigen.Text = dgvRutas.CurrentRow.Cells["origen"].Value.ToString();
+                txtDestino.Text = dgvRutas.CurrentRow.Cells["destino"].Value.ToString();
+                txtHoraEstimada.Text = dgvRutas.CurrentRow.Cells["hora_estimada"].Value.ToString();
             }
         }
     }
 }
-    
+
 
