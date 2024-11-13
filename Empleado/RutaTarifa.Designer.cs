@@ -152,6 +152,7 @@
             this.Controls.Add(this.label2);
             this.Name = "RutaTarifa";
             this.Text = "Ruta tarifa";
+            this.Load += new System.EventHandler(this.RutaTarifa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtRutaTarifa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

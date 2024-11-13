@@ -17,7 +17,8 @@ namespace SystemAirline___PROYECTO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Aerolineas());
+            Application.Run(new Vuelo());
         }
     }
 }
+

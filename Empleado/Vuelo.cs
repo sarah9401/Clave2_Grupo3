@@ -19,66 +19,14 @@ namespace SystemAirline___PROYECTO.Empleado
         {
             InitializeComponent();
             conexionDB = DatabaseConnection.conexion();
-            CargarAviones();
-            CargarHorarios();
+           
+           
             CargarRutas();
             CargarTripulaciones();
             CargarVuelos();
         }
-        private void CargarAviones()
-        {
-            try
-            {
-                if (conexionDB.State == ConnectionState.Closed)
-                    conexionDB.Open();
-
-                string query = "SELECT id_avion, nombre_avion FROM avion";
-                MySqlCommand cmd = new MySqlCommand(query, conexionDB);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-
-                cmbAvion.DataSource = dt;
-                cmbAvion.DisplayMember = "nombre_avion";
-                cmbAvion.ValueMember = "id_avion";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los aviones: " + ex.Message);
-            }
-            finally
-            {
-                if (conexionDB.State == ConnectionState.Open)
-                    conexionDB.Close();
-            }
-        }
-        private void CargarHorarios()
-        {
-            try
-            {
-                if (conexionDB.State == ConnectionState.Closed)
-                    conexionDB.Open();
-
-                string query = "SELECT id_horario, descripcion FROM horarios";
-                MySqlCommand cmd = new MySqlCommand(query, conexionDB);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-
-                cmbHorario.DataSource = dt;
-                cmbHorario.DisplayMember = "descripcion";
-                cmbHorario.ValueMember = "id_horario";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los horarios: " + ex.Message);
-            }
-            finally
-            {
-                if (conexionDB.State == ConnectionState.Open)
-                    conexionDB.Close();
-            }
-        }
+       
+       
         private void CargarRutas()
         {
             try
@@ -208,5 +156,87 @@ namespace SystemAirline___PROYECTO.Empleado
                     conexionDB.Close();
             }
         }
+
+        private void Vuelo_Load(object sender, EventArgs e)
+        {
+            LlenarComboAviones();
+            LlenarComboHorarios();
+           
+
+        }
+        
+            private void LlenarComboAviones()
+            {
+                using (var conexion = DatabaseConnection.conexion())
+                {
+                    conexion.Open();
+                    string query = "SELECT id_avion, nombre_avion FROM avion";
+                    using (var comando = new MySqlCommand(query, conexion))
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cmbAvion.Items.Add(new ComboBoxAvion(
+                                reader["nombre_avion"].ToString(),
+                                Convert.ToInt32(reader["id_avion"])
+                            ));
+                        }
+                    }
+                }
+            }
+        private void LlenarComboHorarios()
+        {
+            using (var conexion = DatabaseConnection.conexion())
+            {
+                conexion.Open();
+                string query = "SELECT id_horario, fecha_vuelo, hora_salida, hora_llegada FROM horarios";
+                using (var comando = new MySqlCommand(query, conexion))
+                using (var reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        cmbHorario.Items.Add(new ComboBoxHorarios(
+                            reader["fecha_vuelo"].ToString(),
+                            Convert.ToInt32(reader["id_horario"])
+                        ));
+                    }
+                }
+            }
+        }
+
+        public class ComboBoxAvion
+        {
+            public string Text { get; set; }
+            public int Value { get; set; }
+
+            public ComboBoxAvion(string text, int value)
+            {
+                Text = text;
+                Value = value;
+            }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
+        public class ComboBoxHorarios
+        {
+            public string Text { get; set; }
+            public int Value { get; set; }
+
+            public ComboBoxHorarios(string text, int value)
+            {
+                Text = text;
+                Value = value;
+            }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
     }
 }
+
