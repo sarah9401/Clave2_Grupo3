@@ -17,7 +17,7 @@ namespace SystemAirline___PROYECTO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Avion());
+            Application.Run(new Asientos());
         }
     }
 }

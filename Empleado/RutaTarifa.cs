@@ -18,7 +18,7 @@ namespace SystemAirline___PROYECTO.Empleado
     using System.Data;
     using System.Windows.Forms;
 
-    
+
 
     public partial class RutaTarifa : Form
     {
@@ -53,7 +53,7 @@ namespace SystemAirline___PROYECTO.Empleado
 
                 // Ejecutar la consulta y asignar el resultado a txtid
                 object result = cmd.ExecuteScalar();
-                txtid.Text = result.ToString();
+                txtId.Text = result.ToString();
             }
             catch (Exception ex)
             {
@@ -198,7 +198,7 @@ namespace SystemAirline___PROYECTO.Empleado
             {
                 // Obtén el id_ruta_tarifa y muestra el valor en txtPrecio
                 RegistroSeleccionadoId = Convert.ToInt32(dtRutaTarifa.Rows[e.RowIndex].Cells["id"].Value);
-                txtid.Text = RegistroSeleccionadoId.ToString();
+                txtId.Text = RegistroSeleccionadoId.ToString();
 
                 // Establece la ruta seleccionada en cmbRuta
                 cmbRuta.Text = dtRutaTarifa.Rows[e.RowIndex].Cells["Ruta"].Value.ToString();
@@ -338,7 +338,7 @@ namespace SystemAirline___PROYECTO.Empleado
                             MessageBox.Show("Registro eliminado correctamente.");
                             CargarRutaTarifa(); // Recargar la tabla para mostrar los cambios
                             RegistroSeleccionadoId = -1; // Reiniciar el id del registro seleccionado
-                            txtid.Clear();
+                            txtId.Clear();
                             cmbRuta.SelectedIndex = -1;
                             cmbTarifa.SelectedIndex = -1;
                         }
@@ -366,10 +366,6 @@ namespace SystemAirline___PROYECTO.Empleado
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
     public class Ruta

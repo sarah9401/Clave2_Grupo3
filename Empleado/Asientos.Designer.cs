@@ -38,12 +38,14 @@
             this.cmbVuelo = new System.Windows.Forms.ComboBox();
             this.lblTarifa = new System.Windows.Forms.Label();
             this.lblRuta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAsiento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtAsientos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(98, 35);
+            this.txtid.Location = new System.Drawing.Point(132, 81);
             this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
@@ -53,36 +55,38 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 35);
+            this.label4.Location = new System.Drawing.Point(99, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 22;
-            this.label4.Text = "id";
+            this.label4.Text = "id:";
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(362, 111);
+            this.btn_eliminar.Location = new System.Drawing.Point(362, 165);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(82, 34);
             this.btn_eliminar.TabIndex = 21;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(362, 73);
+            this.btn_modificar.Location = new System.Drawing.Point(362, 127);
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(82, 34);
             this.btn_modificar.TabIndex = 20;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(362, 35);
+            this.btn_agregar.Location = new System.Drawing.Point(362, 89);
             this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(82, 34);
@@ -100,7 +104,7 @@
             this.dtAsientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtAsientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtAsientos.GridColor = System.Drawing.Color.White;
-            this.dtAsientos.Location = new System.Drawing.Point(30, 166);
+            this.dtAsientos.Location = new System.Drawing.Point(30, 232);
             this.dtAsientos.Margin = new System.Windows.Forms.Padding(2);
             this.dtAsientos.Name = "dtAsientos";
             this.dtAsientos.ReadOnly = true;
@@ -108,11 +112,12 @@
             this.dtAsientos.RowTemplate.Height = 24;
             this.dtAsientos.Size = new System.Drawing.Size(414, 134);
             this.dtAsientos.TabIndex = 24;
+            this.dtAsientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAsientos_CellContentClick);
             // 
             // cmbTarifa
             // 
             this.cmbTarifa.FormattingEnabled = true;
-            this.cmbTarifa.Location = new System.Drawing.Point(98, 99);
+            this.cmbTarifa.Location = new System.Drawing.Point(132, 176);
             this.cmbTarifa.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTarifa.Name = "cmbTarifa";
             this.cmbTarifa.Size = new System.Drawing.Size(144, 21);
@@ -121,7 +126,7 @@
             // cmbVuelo
             // 
             this.cmbVuelo.FormattingEnabled = true;
-            this.cmbVuelo.Location = new System.Drawing.Point(98, 66);
+            this.cmbVuelo.Location = new System.Drawing.Point(132, 143);
             this.cmbVuelo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVuelo.Name = "cmbVuelo";
             this.cmbVuelo.Size = new System.Drawing.Size(144, 21);
@@ -130,7 +135,7 @@
             // lblTarifa
             // 
             this.lblTarifa.AutoSize = true;
-            this.lblTarifa.Location = new System.Drawing.Point(50, 99);
+            this.lblTarifa.Location = new System.Drawing.Point(90, 176);
             this.lblTarifa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTarifa.Name = "lblTarifa";
             this.lblTarifa.Size = new System.Drawing.Size(37, 13);
@@ -140,18 +145,37 @@
             // lblRuta
             // 
             this.lblRuta.AutoSize = true;
-            this.lblRuta.Location = new System.Drawing.Point(50, 68);
+            this.lblRuta.Location = new System.Drawing.Point(90, 143);
             this.lblRuta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRuta.Name = "lblRuta";
             this.lblRuta.Size = new System.Drawing.Size(37, 13);
             this.lblRuta.TabIndex = 15;
             this.lblRuta.Text = "Vuelo:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 118);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Numero asiento:";
+            // 
+            // txtAsiento
+            // 
+            this.txtAsiento.Location = new System.Drawing.Point(132, 111);
+            this.txtAsiento.Name = "txtAsiento";
+            this.txtAsiento.Size = new System.Drawing.Size(102, 20);
+            this.txtAsiento.TabIndex = 26;
+            // 
             // Asientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 337);
+            this.ClientSize = new System.Drawing.Size(510, 377);
+            this.Controls.Add(this.txtAsiento);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_eliminar);
@@ -182,5 +206,7 @@
         private System.Windows.Forms.ComboBox cmbVuelo;
         private System.Windows.Forms.Label lblTarifa;
         private System.Windows.Forms.Label lblRuta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAsiento;
     }
 }
