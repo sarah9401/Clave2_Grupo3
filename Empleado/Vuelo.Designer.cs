@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace SystemAirline___PROYECTO.Empleado
 {
     partial class Vuelo
@@ -185,6 +187,12 @@ namespace SystemAirline___PROYECTO.Empleado
             this.ResumeLayout(false);
 
         }
+
+        private void Vuelo_Load(object sender, EventArgs e)
+        {
+        }
+
+
 
         #endregion
 
